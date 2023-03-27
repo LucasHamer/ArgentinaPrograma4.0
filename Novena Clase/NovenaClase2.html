@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Novena Clase - Objetos</title>
+</head>
+
+<body>
+    <script>
+        let rectangulo = {
+            ancho: 4, largo: 2,
+            perimetro() {
+                perimetroRectangulo = 2 * this.ancho + 2 * this.largo;
+                console.log(perimetroRectangulo);
+            },
+            area() {
+                areaRectangulo = this.ancho * this.largo;
+                console.log(areaRectangulo);
+            },
+        };
+        rectangulo.perimetro();
+        rectangulo.area();
+
+    </script>
+</body>
+
+</html>

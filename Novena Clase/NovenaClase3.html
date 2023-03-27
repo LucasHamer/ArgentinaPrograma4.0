@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Novena Clase - LocalStorage</title>
+</head>
+
+<body>
+    <p id="nombre"></p>
+    <button onclick="cambiarNombre()">Cambiarlo</button>
+
+    <script>
+        let nuevoNombre = localStorage.getItem("nuevoNombre");
+
+        function cambiarNombre() {
+            nuevoNombre = prompt("Cual es el nuevo nombre?");
+            localStorage.setItem("nuevoNombre", nuevoNombre);
+            p.textContent = nuevoNombre;
+        }
+        let p = document.getElementById("nombre");
+
+        if(nuevoNombre == null){
+            p.textContent = "Presione abajo para ingresar un nombre";
+        } else {
+            p.textContent = nuevoNombre;
+        }
+    </script>
+</body>
+
+</html>

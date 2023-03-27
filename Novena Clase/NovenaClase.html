@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Novena Clase - Listas</title>
+</head>
+
+<body id="body">
+
+    <button onclick="cambiarColor()">Cambiar color</button>
+    <br>
+
+    <script>
+        function pedir_num() {
+            let numeros = [];
+            for (let i = 0; i < 3; i++) {
+                numeros[i] = parseInt(prompt("Ingrese un numero: "));
+            }
+            return numeros;
+        }
+        let ingresados = pedir_num();
+        ingresados.sort(function (a, b) { return b - a });
+        console.log(ingresados[0]);
+        //Fin parte 1
+
+        let unoASeis = [1, 2, 3, 4, 5, 6];
+        document.write("Arreglo ahora mismo: ");
+        document.write(unoASeis);
+        unoASeis.pop();
+        document.write("<br>Arreglo despues de sacar el ultimo: ");
+        document.write(unoASeis);
+        unoASeis.push(0);
+        document.write("<br>Arreglo despues de agregar cero: ");
+        document.write(unoASeis);
+
+        document.write("<br>")
+        unoASeis.sort(function (a, b) {
+            return a - b;
+        });
+        for (let x = 0; x < unoASeis.length; x++) {
+            if (unoASeis[x] % 2 == 0) {
+                document.write("Número par: " + unoASeis[x] + "<br>");
+            }
+        }
+        //Fin parte 2
+
+        let colores = ["red", "blue", "green"];
+        j = 0;
+        let body = document.getElementById("body");
+
+        function cambiarColor() {
+            body.style.backgroundColor = colores[j];
+            j++;
+            if (j == colores.length) {
+                j = 0;
+            }            
+        }
+        //Fin parte 3
+
+    </script>
+</body>
+
+</html>

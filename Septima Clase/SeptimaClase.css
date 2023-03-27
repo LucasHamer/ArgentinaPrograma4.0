@@ -1,0 +1,98 @@
+body {
+  background: linear-gradient(to right, red, black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  /* ajusta el ancho según tus necesidades */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.formulario label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+  width: 100%;
+  color: #888;
+  padding-top: 10px;
+}
+
+.formulario label span {
+  width: 150px;
+}
+
+.formulario input {
+  margin-left: 150px;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  border-color: #eee;
+}
+
+.boton {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 10px 200px;
+  background-color: #500000;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.boton:hover {
+  background-color: darkred;
+  border-color: #ccc;
+}
+
+table {
+  margin-top: 30px;
+  width: 90%;
+}
+
+tr.primera-linea {
+  color: white;
+  /* Cambia el color del texto a blanco */
+  border: 1px solid black;
+  /* Añade un borde negro */
+  padding: 10px;
+  /* Añade un poco de espacio dentro de las celdas */
+  background-color: black;
+  text-align: center;
+}
+
+tr:not(.primera-linea) {
+  background-color: white;
+  color: black;
+}
+
+.autor {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}

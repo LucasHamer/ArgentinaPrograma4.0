@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="SeptimaClase.css">
+    <title>Septima Clase</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <form action="SeptimaClase.html" method="get">
+            <h1>Datos</h1>
+            <label>Nombre </label>
+            <input name="nombre" type="text" required maxlength="20" minlength="2">
+            <label><br>Apellido </label>
+            <input name="apellido" type="text" required maxlength="25" minlength="2">
+            <label><br>Edad </label>
+            <input name="edad" type="number" required min="18" max="120">
+            <label><br>Dni </label>
+            <input name="dni" type="number" required min="100000">
+            <label><br>Correo electronico</label>
+            <input name="email" type="email" required>
+            <br>
+            <button class="boton" type="submit">Cargar</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Tabla<br></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="primera-linea">
+                <td>Nombre&emsp;</td>
+                <td>Apellido&emsp;</td>
+                <td>Edad&emsp;</td>
+                <td>Dni&emsp;</td>
+                <td>Correo Electronico</td>
+            </tr>
+            <tr>
+                <td id="nombre">&emsp;</td>
+                <td id="apellido">&emsp;</td>
+                <td id="edad">&emsp;</td>
+                <td id="dni">&emsp;</td>
+                <td id="email">&emsp;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        let form = document.querySelector("form");
+        let tableBody = document.querySelector("table tbody");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let nombre = form.nombre.value;
+            let apellido = form.apellido.value;
+            let edad = form.edad.value;
+            let dni = form.dni.value;
+            let email = form.email.value;
+
+            let newRow = document.createElement("tr");
+
+            let nombreCell = document.createElement("td");
+            nombreCell.textContent = nombre;
+            newRow.appendChild(nombreCell);
+
+            let apellidoCell = document.createElement("td");
+            apellidoCell.textContent = apellido;
+            newRow.appendChild(apellidoCell);
+
+            let edadCell = document.createElement("td");
+            edadCell.textContent = edad;
+            newRow.appendChild(edadCell);
+
+            let dniCell = document.createElement("td");
+            dniCell.textContent = dni;
+            newRow.appendChild(dniCell);
+
+            let emailCell = document.createElement("td");
+            emailCell.textContent = email;
+            newRow.appendChild(emailCell);
+
+            tableBody.appendChild(newRow);
+
+            form.reset();
+        });
+
+    </script>
+
+    <div class="autor" a>
+        <a href="autores.html" target="_blank">Autores</a>
+    </div>
+
+</body>
+
+</html>
